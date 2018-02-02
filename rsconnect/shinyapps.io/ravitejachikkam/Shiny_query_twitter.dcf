@@ -1,0 +1,12 @@
+name: Shiny_query_twitter
+title: Shiny_query_twitter
+username:
+account: ravitejachikkam
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 263766
+bundleId: 1196067
+url: https://ravitejachikkam.shinyapps.io/Shiny_query_twitter/
+when: 1517105712.0436
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,8 @@
+library(shiny)
+library(twitteR)
+library(wordcloud2)
+library(tidyverse)
+library(stringr)
+library(tm)
+library(qdap)
+library(ggmap)
