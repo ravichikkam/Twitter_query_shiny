@@ -1,2 +1,3 @@
 # Twitter_query_shiny
-Shiny app to query twitter data
+
+This is a R shiny app built to query twitter. 
