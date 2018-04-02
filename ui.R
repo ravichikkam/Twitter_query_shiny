@@ -16,20 +16,22 @@ shinyUI(
   
   navbarPage(title = "Query Twitter", fluid = TRUE, theme = shinytheme("cosmo"),
              tags$head(
-               tags$footer(tags$p("Author: Ravi Teja Chikkam"),
-                           tags$a(href = "https://www.linkedin.com/in/ravitejachikkam/", "Linedin Profile"),
-                           tags$p("Email: raviteja.chikkam@asu.edu", style = "color: white"),
-                           tags$p("Contact: +14804019201"),
-                           style = "
-                           position:fixed;
-                           left:0;
-                           bottom:0;
-                           width:100%;
-                           height:50px; /* Height of the footer */
-                           color: white;
-                           background-color: black;
-                           text-align: left;"
-                           
+               tags$div(
+                 tags$footer(tags$p("Author: Ravi Teja Chikkam"),
+                             tags$a(href = "https://www.linkedin.com/in/ravitejachikkam/", "Linedin Profile"),
+                             tags$p("Email: raviteja.chikkam@asu.edu", style = "color: white"),
+                             tags$p("Contact: +14804019201"),
+                             style = "
+                             position:fixed;
+                             left:0;
+                             bottom:0;
+                             width:100%;
+                             height:50px; /* Height of the footer */
+                             color: white;
+                             background-color: black;
+                             text-align: left;"
+                             
+                 )
                )
              ),
              tabPanel("Instructions",
@@ -52,15 +54,19 @@ shinyUI(
                       
              ),
              tabPanel("Trends",
-                      sidebarLayout(
-                        sidebarPanel(
-                          textInput(inputId = "tinput0", label = "Enter Location", 
-                                    value = "San Fransisco"),
-                          DT::dataTableOutput(outputId = "toutput"),
-                          submitButton("submit_trend")
-                        ),
-                        mainPanel(
-                          leafletOutput(outputId = "map", height = 700)
+                      fluidPage(
+                        sidebarLayout(
+                          sidebarPanel(
+                            textInput(inputId = "tinput0", 
+                                      label = "Enter Location", 
+                                      value = "San Fransisco"),
+                            DT::dataTableOutput(outputId = "toutput",
+                                                width = "80%"),
+                            actionButton("action1", "submit_trend")
+                          ),
+                          mainPanel(
+                            leafletOutput(outputId = "map", height = 600)
+                          )
                         )
                       )
              ),
@@ -77,7 +83,7 @@ shinyUI(
                                     value = 1000),
                           textInput(inputId = "tinput4", 
                                     label = "language", value = "en"),
-                          submitButton("submit")
+                          actionButton("action2", "submit")
                         ),
                         
                         # Show a plot of the generated distribution

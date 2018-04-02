@@ -5,8 +5,8 @@ account: ravitejachikkam
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 263766
-bundleId: 1196067
+bundleId: 1297285
 url: https://ravitejachikkam.shinyapps.io/Shiny_query_twitter/
-when: 1517105712.0436
+when: 1522633245.67736
 asMultiple: FALSE
 asStatic: FALSE
